@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS values and units</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CSS values and units</h1>
+
+  <h2>1. Integer</h2>
+  <p>The value 700 makes the text bold.</p>
+  <pre>font-weight: 700;</pre>
+  <p class="integer-example">Bold text</p>
+
+  <h2>2. Keyword</h2>
+  <p>The keyword center moves the text to the center.</p>
+  <pre>text-align: center;</pre>
+  <p class="keyword-example">Centered text</p>
+
+  <h2>3. Function</h2>
+  <p>The rgb() function makes a color.</p>
+  <pre>background-color: rgb(255, 160, 120);</pre>
+  <div class="function-example">rgb color</div>
+
+  <h2>4. Combination</h2>
+  <p>A border value combines a size, style and color.</p>
+  <pre>border: 3px solid black;</pre>
+  <div class="combination-example">Combined values</div>
+
+  <h2>5. px and %</h2>
+  <p>Resize the parent. The blue box stays 150px wide. The green box takes 50% of the parent.</p>
+  <label>Parent width: <input id="parent-width" type="range" min="200" max="500" value="300"> <span id="width-value">300px</span></label>
+  <pre>.blue { width: 150px; }
+.green { width: 50%; }</pre>
+  <div id="parent">
+    <div class="blue">150px</div>
+    <div class="green">50%</div>
+  </div>
+
+  <h2>6. em and rem</h2>
+  <p>Change the parent font size. The em text changes. The rem text uses the root font size.</p>
+  <label>Parent font size: <input id="font-size" type="range" min="12" max="30" value="16"> <span id="font-value">16px</span></label>
+  <pre>html { font-size: 16px; }
+.em { font-size: 2em; }
+.rem { font-size: 2rem; }</pre>
+  <div id="text-parent">
+    <p class="em">This is 2em</p>
+    <p class="rem">This is 2rem</p>
+  </div>
+
+  <h2>7. vw</h2>
+  <p>Resize the browser window. This box is always 50% of the viewport width.</p>
+  <pre>.viewport-box { width: 50vw; }</pre>
+  <div class="viewport-box">50vw</div>
+
+  <h2>8. A number without a unit</h2>
+  <p>Opacity goes from 0 (invisible) to 1 (fully visible). It fades the text too.</p>
+  <label>Opacity: <input id="opacity" type="range" min="0" max="1" step="0.1" value="1"> <span id="opacity-value">1</span></label>
+  <pre id="opacity-code">.fade { opacity: 1; }</pre>
+  <div class="fade">Hello!</div>
+
+  <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Values_and_units">MDN CSS values and units</a></p>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+html { font-size: 16px; }
+body { font-family: Arial, sans-serif; margin: 30px; }
+h2 { margin-top: 40px; }
+p, li { line-height: 1.5; }
+pre { background: #eee; padding: 10px; width: fit-content; max-width: 100%; overflow: auto; }
+input { vertical-align: middle; }
+.integer-example { font-weight: 700; }
+.keyword-example { text-align: center; background: #eee; padding: 10px; }
+.function-example { background-color: rgb(255, 160, 120); width: 150px; padding: 15px; }
+.combination-example { border: 3px solid black; width: 150px; padding: 15px; }
+#parent { width: 300px; max-width: 100%; border: 2px solid #888; }
+.blue, .green { padding: 12px 0; margin: 10px 0; }
+.blue { background: lightblue; width: 150px; }
+.green { background: lightgreen; width: 50%; }
+#text-parent { font-size: 16px; }
+.em { font-size: 2em; margin: 10px 0; }
+.rem { font-size: 2rem; margin: 10px 0; }
+.viewport-box { width: 50vw; background: lightblue; padding: 15px 0; }
+.fade { background: coral; width: 150px; padding: 20px 0; text-align: center; }
