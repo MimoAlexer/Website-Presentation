@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CSS values and units</title>
+  <title>CSS-Werte und Einheiten</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>CSS values and units</h1>
+  <h1>CSS-Werte und Einheiten</h1>
 
-  <h2>1. Integer</h2>
-  <p>The value 700 makes the text bold.</p>
+  <h2>1. Ganzzahl</h2>
+  <p>Der Wert 700 stellt den Text fett dar.</p>
+  <p class="unit-type"><strong>Einheitentyp:</strong> Einheitenlos — <code>700</code> ist eine Ganzzahl und weder eine absolute noch eine relative Einheit.</p>
   <pre>font-weight: 700;</pre>
-  <p class="integer-example">Bold text</p>
+  <p class="integer-example">Fetter Text</p>
 
-  <h2>2. Keyword</h2>
-  <p>The keyword center moves the text to the center.</p>
+  <h2>2. Schlüsselwort</h2>
+  <p>Das Schlüsselwort center richtet den Text mittig aus.</p>
+  <p class="unit-type"><strong>Einheitentyp:</strong> Einheitenlos — <code>center</code> ist ein Schlüsselwort und weder eine absolute noch eine relative Einheit.</p>
   <pre>text-align: center;</pre>
-  <p class="keyword-example">Centered text</p>
+  <p class="keyword-example">Zentrierter Text</p>
 
-  <h2>3. Function</h2>
-  <p>The rgb() function makes a color.</p>
+  <h2>3. Funktion</h2>
+  <p>Die Funktion rgb() erzeugt eine Farbe.</p>
+  <p class="unit-type"><strong>Einheitentyp:</strong> Einheitenlos — <code>rgb()</code> ist eine Farbfunktion und weder eine absolute noch eine relative Einheit.</p>
   <pre>background-color: rgb(255, 160, 120);</pre>
-  <div class="function-example">rgb color</div>
+  <div class="function-example">rgb-Farbe</div>
 
-  <h2>4. Combination</h2>
-  <p>A border value combines a size, style and color.</p>
+  <h2>4. Kombination</h2>
+  <p>Ein Rahmenwert kombiniert eine Größe, einen Stil und eine Farbe.</p>
+  <p class="unit-type"><strong>Einheitentyp:</strong> <code>px</code> ist eine <strong>absolute Einheit</strong>.</p>
   <pre>border: 3px solid black;</pre>
-  <div class="combination-example">Combined values</div>
+  <div class="combination-example">Kombinierte Werte</div>
 
-  <h2>5. px and %</h2>
-  <p>Resize the parent. The blue box stays 150px wide. The green box takes 50% of the parent.</p>
-  <label>Parent width: <input id="parent-width" type="range" min="200" max="500" value="300"> <span id="width-value">300px</span></label>
+  <h2>5. px und %</h2>
+  <p>Ändere die Breite des Elternelements. Der blaue Kasten bleibt 150px breit. Der grüne Kasten nimmt 50% der Breite des Elternelements ein.</p>
+  <p class="unit-type"><strong>Einheitentyp:</strong> <code>px</code> ist eine <strong>absolute Einheit</strong>; <code>%</code> ist eine <strong>relative Einheit</strong>.</p>
+  <label>Breite des Elternelements: <input id="parent-width" type="range" min="200" max="500" value="300"> <span id="width-value">300px</span></label>
   <pre>.blue { width: 150px; }
 .green { width: 50%; }</pre>
   <div id="parent">
@@ -39,29 +44,32 @@
     <div class="green">50%</div>
   </div>
 
-  <h2>6. em and rem</h2>
-  <p>Change the parent font size. The em text changes. The rem text uses the root font size.</p>
-  <label>Parent font size: <input id="font-size" type="range" min="12" max="30" value="16"> <span id="font-value">16px</span></label>
+  <h2>6. em und rem</h2>
+  <p>Ändere die Schriftgröße des Elternelements. Der Text mit em verändert sich. Der Text mit rem verwendet die Schriftgröße des Wurzelelements.</p>
+  <p class="unit-type"><strong>Einheitentyp:</strong> <code>px</code> ist eine <strong>absolute Einheit</strong>; <code>em</code> und <code>rem</code> sind <strong>relative Einheiten</strong>.</p>
+  <label>Schriftgröße des Elternelements: <input id="font-size" type="range" min="12" max="30" value="16"> <span id="font-value">16px</span></label>
   <pre>html { font-size: 16px; }
 .em { font-size: 2em; }
 .rem { font-size: 2rem; }</pre>
   <div id="text-parent">
-    <p class="em">This is 2em</p>
-    <p class="rem">This is 2rem</p>
+    <p class="em">Dieser Text ist 2em groß</p>
+    <p class="rem">Dieser Text ist 2rem groß</p>
   </div>
 
   <h2>7. vw</h2>
-  <p>Resize the browser window. This box is always 50% of the viewport width.</p>
+  <p>Ändere die Größe des Browserfensters. Dieser Kasten ist immer halb so breit wie der Darstellungsbereich.</p>
+  <p class="unit-type"><strong>Einheitentyp:</strong> <code>vw</code> ist eine <strong>relative Einheit</strong>.</p>
   <pre>.viewport-box { width: 50vw; }</pre>
   <div class="viewport-box">50vw</div>
 
-  <h2>8. A number without a unit</h2>
-  <p>Opacity goes from 0 (invisible) to 1 (fully visible). It fades the text too.</p>
-  <label>Opacity: <input id="opacity" type="range" min="0" max="1" step="0.1" value="1"> <span id="opacity-value">1</span></label>
+  <h2>8. Einheitenlose Zahl</h2>
+  <p>Die Deckkraft reicht von 0 (unsichtbar) bis 1 (vollständig sichtbar). Dabei wird auch der Text ausgeblendet.</p>
+  <p class="unit-type"><strong>Einheitentyp:</strong> Einheitenlos — Werte für die Deckkraft sind weder absolute noch relative Einheiten.</p>
+  <label>Deckkraft: <input id="opacity" type="range" min="0" max="1" step="0.1" value="1"> <span id="opacity-value">1</span></label>
   <pre id="opacity-code">.fade { opacity: 1; }</pre>
-  <div class="fade">Hello!</div>
+  <div class="fade">Hallo!</div>
 
-  <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Values_and_units">MDN CSS values and units</a></p>
+  <p>Quelle: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Values_and_units">MDN: CSS-Werte und Einheiten</a></p>
   <script src="app.js"></script>
 </body>
 </html>

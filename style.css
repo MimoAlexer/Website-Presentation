@@ -3,6 +3,8 @@ body { font-family: Arial, sans-serif; margin: 30px; }
 h2 { margin-top: 40px; }
 p, li { line-height: 1.5; }
 pre { background: #eee; padding: 10px; width: fit-content; max-width: 100%; overflow: auto; }
+.unit-type { margin: 8px 0 12px; padding: 8px 10px; width: fit-content; max-width: 100%; border-left: 4px solid #2563eb; background: #eff6ff; }
+.unit-type code { font-weight: bold; }
 input { vertical-align: middle; }
 .integer-example { font-weight: 700; }
 .keyword-example { text-align: center; background: #eee; padding: 10px; }
