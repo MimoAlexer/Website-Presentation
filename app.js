@@ -1,11 +1,24 @@
-// Change the parent width of the percentage example.
-document.getElementById('parent-width').oninput = function () {
-  document.getElementById('parent').style.width = this.value + 'px';
-  document.getElementById('width-value').textContent = this.value + 'px';
-};
+document.addEventListener('DOMContentLoaded', function () {
+  const parentWidthInput = document.getElementById('parent-width');
+  const parent = document.getElementById('parent');
+  const widthValue = document.getElementById('width-value');
+  const fontSizeInput = document.getElementById('font-size');
+  const textParent = document.getElementById('text-parent');
+  const fontValue = document.getElementById('font-value');
 
-// Change the parent font size of the em example.
-document.getElementById('font-size').oninput = function () {
-  document.getElementById('text-parent').style.fontSize = this.value + 'px';
-  document.getElementById('font-value').textContent = this.value + 'px';
-};
+  function updateParentWidth() {
+    parent.style.width = parentWidthInput.value + 'px';
+    widthValue.textContent = parentWidthInput.value + 'px';
+  }
+
+  function updateFontSize() {
+    textParent.style.fontSize = fontSizeInput.value + 'px';
+    fontValue.textContent = fontSizeInput.value + 'px';
+  }
+
+  parentWidthInput.addEventListener('input', updateParentWidth);
+  fontSizeInput.addEventListener('input', updateFontSize);
+
+  updateParentWidth();
+  updateFontSize();
+});
