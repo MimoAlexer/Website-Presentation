@@ -6,6 +6,7 @@ pre { background: #eee; padding: 10px; width: fit-content; max-width: 100%; over
 .unit-type { margin: 8px 0 12px; padding: 8px 10px; width: fit-content; max-width: 100%; }
 .unit-type.absolute { border-left: 4px solid #dc2626; background: #fef2f2; }
 .unit-type.relative { border-left: 4px solid #16a34a; background: #f0fdf4; }
+.unit-type.function { border-left: 4px solid #ca8a04; background: #fefce8; }
 .unit-type code { font-weight: bold; }
 input { vertical-align: middle; }
 .px-box, .cm-box, .mm-box, .viewport-width-box, .viewport-height-box, .percent-box {
@@ -24,3 +25,4 @@ input { vertical-align: middle; }
 .rem { font-size: 2rem; margin: 10px 0; }
 .viewport-width-box { width: 50vw; max-width: 100%; }
 .viewport-height-box { display: flex; width: 150px; height: 10vh; min-height: 45px; align-items: center; }
+.function-example { width: 150px; padding: 15px; background-color: rgb(255, 0, 0); }
